@@ -1,0 +1,191 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  /* Title (Logo Styling) */
+h1 {
+    text-align: center;
+    font-size: 3rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: #333;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
+    display: inline-block;
+    position: relative;
+    background: linear-gradient(to right, #ff7e5f, #feb47b);
+    -webkit-background-clip: text; /* Vendor prefix for Safari */
+    -moz-background-clip: text;    /* Vendor prefix for Firefox */
+    background-clip: text;         /* Standard property */
+    color: transparent;
+  }
+  
+  
+h1::after {
+    content: '🎶';  /* Add a small music note icon to emphasize the theme */
+    position: absolute;
+    right: -30px;
+    top: 0;
+    font-size: 2rem;
+    color: #ff7e5f;
+  }
+  
+  /* Dark Mode Title */
+  body.dark-mode h1 {
+    color: transparent;
+    background: linear-gradient(to right, #0072ff, #00c6ff); /* Blue gradient for dark mode */
+    -webkit-background-clip: text; /* Vendor prefix for Safari */
+    -moz-background-clip: text;    /* Vendor prefix for Firefox */
+    background-clip: text;         /* Standard property */
+  }
+  
+  
+  /* Song List Screen */
+  #song-list-screen {
+    padding: 20px;
+  }
+  
+  #search-bar {
+    display: block;
+    margin: 0 auto 20px auto;
+    padding: 12px;
+    width: 80%;
+    font-size: 1.1rem;
+    border: 2px solid #ccc;
+    border-radius: 30px;
+    background-color: #f8f8f8;
+    transition: background-color 0.3s, border-color 0.3s;
+  }
+  
+  #search-bar:focus {
+    outline: none;
+    border-color: #0056b3;
+  }
+  
+  body.dark-mode #search-bar {
+    background-color: #333;
+    color: #fff;
+    border-color: #555;
+  }
+  
+  body.dark-mode #search-bar:focus {
+    border-color: #0066cc;
+  }
+  
+  /* Song List Styling */
+  #song-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  #song-list li {
+    padding: 12px 20px;
+    margin: 10px 0;
+    font-size: 1.3rem;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  #song-list li:hover {
+    background-color: #0056b3;
+    color: #fff;
+  }
+  
+  /* Dark Mode */
+  body.dark-mode {
+    background-color: #121212;
+    color: #fff;
+  }
+  
+  body.dark-mode #song-list li {
+    background-color: #333;
+  }
+  
+  body.dark-mode #song-list li:hover {
+    background-color: #444;
+    color: #ddd;
+  }
+  
+  /* Lyrics Screen */
+  #lyrics-screen {
+    padding: 20px;
+  }
+  
+  #lyrics-screen.hidden {
+    display: none;
+  }
+  
+  #song-title {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  body.dark-mode #song-title {
+    color: #fff;
+  }
+  
+  #song-lyrics {
+    white-space: pre-wrap;
+    line-height: 1.6;
+    color: #333;
+  }
+  
+  body.dark-mode #song-lyrics {
+    color: #ccc;
+  }
+  
+  /* Go Back Button */
+  #go-back {
+    background-color: #0056b3;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  #go-back:hover {
+    background-color: #003c7e;
+  }
+  
+  /* Dark Mode Toggle */
+  #dark-mode-toggle {
+    background: none;
+    border: none;
+    font-size: 1.8rem;
+    cursor: pointer;
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    color: #333;
+    transition: color 0.3s, transform 0.3s;
+    border-radius: 50%;
+    padding: 10px;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  #dark-mode-toggle:hover {
+    transform: scale(1.1);
+  }
+  
+  body.dark-mode #dark-mode-toggle {
+    color: #fff;
+  }
+  
+  /* Dark Mode Hover for Dark Mode Toggle */
+  body.dark-mode #dark-mode-toggle:hover {
+    color: #ddd;
+  }
+  
